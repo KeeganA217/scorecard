@@ -16,7 +16,11 @@ const Header = () => {
             />
           </Navbar.Brand>
           <Navbar.Brand>
-            <h2>QA Scorecard</h2>
+            <p
+              style={{ fontWeight: "500", fontSize: "2rem", marginTop: "1rem" }}
+            >
+              QA Scorecard
+            </p>
           </Navbar.Brand>
         </Container>
       </Navbar>

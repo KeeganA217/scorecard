@@ -1,9 +1,12 @@
 import { Fragment } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Container } from "react-bootstrap";
 import Header from "./components/Header";
-import LoginScreen from "./screens/LoginScreen";
 import LinkHeader from "./components/LinkHeader";
+import LoginScreen from "./screens/LoginScreen";
+import HomeScreen from "./screens/HomeScreen";
+import ScorecardScreen from "./screens/ScorecardScreen";
+import ReportingScreen from "./screens/ReportingScreen";
+import MaintenanceScreen from "./screens/MaintenanceScreen";
 
 function App() {
   return (
@@ -12,9 +15,11 @@ function App() {
         <Header />
         <LinkHeader />
         <main className="py-3">
-          <Container>
-            <Route path="/" component={LoginScreen} />
-          </Container>
+          <Route exact path="/" component={LoginScreen} />
+          <Route exact path="/home" component={HomeScreen} />
+          <Route exact path="/scorecards" component={ScorecardScreen} />
+          <Route exact path="/maintenance" component={MaintenanceScreen} />
+          <Route exact path="/reporting" component={ReportingScreen} />
         </main>
       </Fragment>
     </Router>
